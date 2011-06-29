@@ -1,0 +1,13 @@
+<?php if (count($this->data)) :?>
+    <div class="pages">
+        <ul>
+            <li><a href="index"><?php echo $this->translate('home')?></a></li>
+            <?php foreach ($this->data as $page) :?>
+                <li><a href="page/index/view/id/<?php echo $page->id?>"><?php echo $page->title?></a></li>
+            <?php endforeach;?>
+            <?php if (Zend_Auth::getInstance()->hasIdentity()): ?>
+                <li><a href="user/logout"><?php echo $this->translate('logout')?></a></li>
+            <?php endif;?>
+        </ul>
+    </div>
+<?php endif;?>
