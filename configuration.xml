@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <name>page</name>
+    <description>Pageviews system</description>
+    <author>Preceptor Educação a Distância</author>
+    <version>1.0</version>
+    <license>GPL 3</license>
+    <keywords>page, system, views</keywords>
+    <url>http://www.preceptoread.com.br</url>
+    
+    <files>
+        <sql>
+            <install>data/sql/install.sql</install>
+            <uninstall>data/sql/uninstall.sql</uninstall>
+        </sql>
+        <languages>
+            <language name="pt_BR">data/language/pt_BR/page.csv</language>
+        </languages>
+    </files>
+    
+    <!--
+    <configuration>
+        <item name="notepad_option">valor para gravar na tabela</item>
+    </configuration>
+    -->
+    
+    <menus>
+        <menu type="tri_classroom_menu">
+            <item group="support" resource="page/index/index">page</item>    
+        </menu>
+    </menus>
+    
+    <access>
+        <resource role="institution">page/index/index</resource>
+        <resource role="institution">page/index/form</resource>
+        <resource role="institution">page/index/view</resource>
+        <resource role="institution">page/index/save</resource>
+        <resource role="institution">page/index/delete</resource>
+        <resource role="institution">page/index/widget</resource>
+    </access>
+</configuration>
